@@ -1,0 +1,9 @@
+<%= form_for joke do |f| %>
+	<%= f.label "Introduction" %>
+	<%= f.text_area :introduction, size: "20" %>
+	<%= f.label "Punch-line" %>
+	<%= f.text_area :punch_line, size: "20" %>
+	<%= f.submit %>
+
+
+<% end %>

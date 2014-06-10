@@ -1,0 +1,26 @@
+<h1>You got jokes?!</h1>
+<a href="/jokes/new">Add Joke</a>
+
+<table>
+	<thead>
+		<tr>
+			<th>Intro</th>
+			<th>Punch Line</th>
+			<th>Likes</th>
+			<th></th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @jokes.each do |joke| %>
+
+			<tr>
+				<td><%= joke.introduction %></td>
+				<td><%= joke.punch_line %></td>
+				<td><%= joke.likes %></td>
+				<td><%= button_to "Like", like_joke_path(joke) %></td>
+				<td><%= button_to "Flag", flag_joke_path(joke) %></td>
+			</tr>
+			<% end %>
+	</tbody>
+</table>
